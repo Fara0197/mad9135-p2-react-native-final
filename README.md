@@ -1,12 +1,13 @@
 # mad9135-p2-react-native-final
 ## Artaryo App
 
-General functionality: 
+
+### General functionality
 
 This application is based on an art gallery company called 'Artayo'. 
 
 A splash screen appears first then users are brought to the 'Home' page,
-which gives a brief description of about the company is about. 
+which gives a brief description of what the company is about. 
 
 When the user navigates to the 'Art' page, data is fetched and displays a list of popular art pieces. 
 
@@ -15,7 +16,7 @@ When the user navigates to the 'About' page, data is fetched and displays profil
 When the user navigates to the 'Artists' page, data is fetched and displays a list of artists. Users can search 
 for artists as well. 
 
-*testing done on iphone*
+note: *testing done on iphone*
 
 
 The app has the following components:
