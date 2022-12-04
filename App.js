@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./components/Home";
 import About from "./components/About"
+import Art from "./components/Art"
 
 import { UserProvider } from "./context/userContext";
 import { UserStackNavigation } from "./navigation/UserNavigation";
@@ -26,6 +27,8 @@ export default function App() {
             tabBarInactiveTintColor: "black",
           }}
         >
+
+          
           <Tab.Screen
    
             name="ARTAYO"
@@ -36,6 +39,18 @@ export default function App() {
                   <Ionicons name={"home"} size={size} color={color} />
                 ) : (
                   <Ionicons name={"ios-home"} size={size} color={color} />
+                ),
+            }}
+          />
+          <Tab.Screen
+            name="Art"
+            component={Art}
+            options={{
+              tabBarIcon: ({ focused, size, color }) =>
+                focused ? (
+                  <Ionicons name={"brush"} size={size} color={color} />
+                ) : (
+                  <Ionicons name={"ios-brush"} size={size} color={color} />
                 ),
             }}
           />
@@ -51,15 +66,17 @@ export default function App() {
                 ),
             }}
           />
+
+
           <Tab.Screen
             name="ARTISTS"
             component={UserStackNavigation}
             options={{
               tabBarIcon: ({ focused, size, color }) =>
                 focused ? (
-                  <Ionicons name={"brush"} size={size} color={color} />
+                  <Ionicons name={"search"} size={size} color={color} />
                 ) : (
-                  <Ionicons name={"ios-brush"} size={size} color={color} />
+                  <Ionicons name={"ios-search"} size={size} color={color} />
                 ),
             }}
           />

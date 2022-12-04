@@ -1,6 +1,6 @@
 import { View, Text, Button, Image, StyleSheet } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-function About({props}) {
+function Art() {
   return (
     <SafeAreaProvider>
       <SafeAreaView
@@ -14,7 +14,7 @@ function About({props}) {
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-        
+         
 
          
           
@@ -24,4 +24,4 @@ function About({props}) {
   );
 }
 
-export default About;
+export default Art;

@@ -1,4 +1,4 @@
-import { View, Text, FlatList, ActivityIndicator } from "react-native";
+import { View, Text, FlatList, ActivityIndicator, TextInput} from "react-native";
 import { useUser } from "../context/userContext";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
@@ -26,7 +26,13 @@ function User({ navigation }) {
       ) : (
         <>
           <StatusBar style="dark" />
-
+          <Text> Search:</Text>
+      <TextInput style={{ margin: 15, borderColor: '#e07a5f',
+    borderWidth: 1 }}/>
+ 
+    
+  
+      
           <FlatList
             data={users}
             renderItem={({ item }) => (
@@ -39,8 +45,13 @@ function User({ navigation }) {
           />
         </>
       )}
+      
     </>
   );
+  
 }
+
+
+
 
 export default User;

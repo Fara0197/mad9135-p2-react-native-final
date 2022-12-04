@@ -1,7 +1,9 @@
-import { View, Text, Button, Image, StyleSheet } from "react-native";
+import { View, Text, Button, Image, StyleSheet, Animated } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from 'expo-status-bar';
 function Home( {navigation }) {
+
+
   return (
     <SafeAreaProvider>
       <SafeAreaView
