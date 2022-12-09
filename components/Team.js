@@ -26,9 +26,8 @@ function User({ navigation }) {
       ) : (
         <>
           <StatusBar style="dark" />
-          <Text> Search:</Text>
-      <TextInput style={{ margin: 15, borderColor: '#e07a5f',
-    borderWidth: 1 }}/>
+          
+     
  
     
   
@@ -44,7 +43,7 @@ function User({ navigation }) {
             keyExtractor={(item) => `${item.id}`}
           />
         </>
-      )}
+      ) }
       
     </>
   );

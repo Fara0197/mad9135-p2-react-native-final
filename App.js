@@ -60,7 +60,7 @@ export default function App() {
             options={{
               tabBarIcon: ({ focused, size, color }) =>
                 focused ? (
-                  <Ionicons name={"about"} size={size} color={color} />
+                  <Ionicons name={"people"} size={size} color={color} />
                 ) : (
                   <Ionicons name={"ios-people"} size={size} color={color} />
                 ),

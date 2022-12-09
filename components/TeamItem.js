@@ -13,20 +13,23 @@ export default function UserItem({ user, onPress }) {
             source={{ uri: `${user.thumbnail.lqip}` }}
           ></Image> */}
           <Text style={{ fontSize: 20, fontWeight: "bold", padding: 5 }}>
-            {user.title}
+            title: {user.title}
           </Text>
+
           <Text style={{ fontSize: 12, fontWeight: "bold", padding: 5 }}>
-            {user.artwork_type_title}
+           type: {user.artwork_type_title}
           </Text>
+
           <Text style={{ fontSize: 12, padding: 5 }}>
-            {user.department_title}
+           department: {user.department_title}
           </Text>
+
           <Text style={{ fontSize: 10, fontWeight: "light", padding: 5 }}>
-            By {user.artist_title}
+            by: {user.artist_title}
           </Text>
 
           <Text style={{ fontSize: 8, fontWeight: "light", padding: 5 }}>
-            By {user.date_display}
+           date: {user.date_display}
           </Text>
         </TouchableOpacity>
       </SafeAreaView>
