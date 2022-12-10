@@ -12,9 +12,13 @@ import {
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+//import { useFonts } from 'expo-font';
 
 function Home({ navigation }) {
   const [text, setText] = useState("");
+  // const [fontsLoaded] = useFonts({
+  //   'Inter-Black': require("'./assets/fonts/Inter-Black.ttf'"),
+  // });
 
   const confirmEmail = () =>{
     Alert.alert("Confirm","do you want to submit this email?",[
@@ -44,8 +48,10 @@ function Home({ navigation }) {
             source={require("../assets/art-gallery.png")}
           />
 
+        
           <Text
             style={{
+        
               fontSize: 15,
               fontWeight: "light",
               padding: 20,
@@ -90,7 +96,7 @@ function Home({ navigation }) {
             placeholder="type your email here"
           />
           <Button color="#ca5310" title="submit" onPress={()=>confirmEmail()}></Button>
-          <Text> Thanks for joining us: {text}</Text>
+          <Text> Thanks for joining us! {text}</Text>
         </View>
         <StatusBar style="light" />
       </SafeAreaView>

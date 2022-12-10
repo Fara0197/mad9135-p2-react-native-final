@@ -10,6 +10,7 @@ import {
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { artList } from "../data/Data"
 import React, {Component} from "react";
+import { LinearGradient } from 'expo-linear-gradient';
 export default class Art extends Component {
   constructor(props) {
     super(props);
@@ -21,8 +22,12 @@ export default class Art extends Component {
       <TouchableHighlight>
       
         <View style={{ justifyContent: 'flex-end'}}>
-        <Text style={{marginLeft: 'auto',
-      fontSize: 18, padding: 5, fontStyle: 'italic'}}> {item.title}</Text>
+          <LinearGradient
+          colors={['#f5ebe0', '#eab69f','#f4f1de', ]}>
+                 <Text style={{marginLeft: 'auto',
+      fontSize: 18, padding: 5, fontStyle: 'italic'}}> title: {item.title}</Text>
+          </LinearGradient>
+   
         <Image style={{
             width: 350,
             height: 300,
@@ -56,8 +61,13 @@ export default class Art extends Component {
               renderItem={this.renderList}
               keyExtractor={(item) => item.id}
             />
+              
+             
           </View>
-          
+      
+        
+        
+      
         </SafeAreaView>
       </SafeAreaProvider>
     );

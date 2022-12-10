@@ -27,28 +27,28 @@ The app has the following components:
 - Animated, StyleSheet, Alert 
 
 4 Expo components and Apis:
-- BlurView, Font, SplashScreen, LinearGradient 
+-  Font, SplashScreen, LinearGradient 
 
 The home page has the following components:
 - banner image 
 - information of what 'Artayo is about
 - a button that naviagates to the 'About' page 
-- A TextiInou
+- A TextInput for subscribe to email
+- with an alert button
 - Font component used 
 
 
 the art page has the following components:
-- cards of art piece images along with a brief description/title 
-- a BlurView used 
+- cards of art piece images along with a title 
+- linear gradient 
 
 the about page has the following components:
 - profile cards of indivudals working for Artaryo
 - animation used here 
 
 the artists page has the following components:
-- search functionality
 - cards of artists and their work 
-- linear gradient used here 
-- alert used here 
+- activity loader 
+
 
 
