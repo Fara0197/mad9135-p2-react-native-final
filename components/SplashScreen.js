@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 // Logo....
 
-import Home from './Home';
+
 
 
 

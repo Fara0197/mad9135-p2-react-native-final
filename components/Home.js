@@ -9,12 +9,18 @@ import {
   Alert,
   findNodeHandle,
 } from "react-native";
+import { useCallback } from 'react';
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-//import { useFonts } from 'expo-font';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 
 function Home({ navigation }) {
+
+
+
+
   const [text, setText] = useState("");
   // const [fontsLoaded] = useFonts({
   //   'Inter-Black': require("'./assets/fonts/Inter-Black.ttf'"),
@@ -30,6 +36,20 @@ function Home({ navigation }) {
   const noOption = () =>{
     setText("");
   }
+
+  const [fontsLoaded] = useFonts({
+    'Inter-Black': require('../assets/fonts/PatrickHand-Regular.ttf'),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
     <SafeAreaProvider>
       <SafeAreaView
@@ -40,8 +60,8 @@ function Home({ navigation }) {
           backgroundColor: "#f5ebe0",
         }}
       >
-        <View
-          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        <View onLayout={onLayoutRootView}
+          style={{ flex: 1, justifyContent: "center", alignItems: "center"}}
         >
           <Image
             style={{ width: 350, height: 300 }}
@@ -51,7 +71,7 @@ function Home({ navigation }) {
         
           <Text
             style={{
-        
+              fontFamily: 'Inter-Black',
               fontSize: 15,
               fontWeight: "light",
               padding: 20,
@@ -72,7 +92,7 @@ function Home({ navigation }) {
           <Text
             style={{
               fontSize: 12,
-
+              fontFamily: 'Inter-Black',
               padding: 20,
             }}
           >
@@ -95,8 +115,8 @@ function Home({ navigation }) {
             }}
             placeholder="type your email here"
           />
-          <Button color="#ca5310" title="submit" onPress={()=>confirmEmail()}></Button>
-          <Text> Thanks for joining us! {text}</Text>
+          <Button color="#ca5310" title="Submit" onPress={()=>confirmEmail()}></Button>
+          <Text style={{   fontFamily: 'Inter-Black'}}> Thanks for joining us! {text}</Text>
         </View>
         <StatusBar style="light" />
       </SafeAreaView>
