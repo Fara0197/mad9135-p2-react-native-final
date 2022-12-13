@@ -8,13 +8,14 @@ import {
   TextInput,
   Alert,
   findNodeHandle,
+  ScrollView
 } from "react-native";
 import { useCallback } from 'react';
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
+
 
 function Home({ navigation }) {
 
@@ -54,6 +55,7 @@ function Home({ navigation }) {
     <SafeAreaProvider>
       <SafeAreaView
         style={{
+          padding: 10,
           alignItems: "center",
           justifyContent: "center",
           flex: 1,
@@ -61,13 +63,29 @@ function Home({ navigation }) {
         }}
       >
         <View onLayout={onLayoutRootView}
-          style={{ flex: 1, justifyContent: "center", alignItems: "center"}}
+          style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 4}}
         >
+
+<ScrollView>
+<Text
+            style={{
+             textAlign: 'center',
+              fontSize: 30,
+              fontFamily: 'Inter-Black',
+              padding: 20,
+            }}
+          >
+      Artayo
+          </Text>
           <Image
             style={{ width: 350, height: 300 }}
             source={require("../assets/art-gallery.png")}
           />
-
+      <Button
+            title="About Us"
+            color="#ca5310"
+            onPress={() => navigation.navigate("ABOUT")}
+          />
         
           <Text
             style={{
@@ -83,11 +101,7 @@ function Home({ navigation }) {
             gallery. We are based in Ottawa, Ontario.
           </Text>
 
-          <Button
-            title="About Us"
-            color="#ca5310"
-            onPress={() => navigation.navigate("ABOUT")}
-          />
+    
 
           <Text
             style={{
@@ -105,18 +119,22 @@ function Home({ navigation }) {
             
             keyboardType="email-address"
             style={{
+              textAlign: 'center',
               fontSize: 15,
               backgroundColor: "#f5ebe0",
-              width: "100%",
+              marginLeft: 70,
+              width: "60%",
               borderWidth: 1,
-              borderColor: "#fbc4ab",
+              borderColor: "#fb8500",
               borderRadius: 8,
               padding: 10,
             }}
             placeholder="type your email here"
           />
           <Button color="#ca5310" title="Submit" onPress={()=>confirmEmail()}></Button>
-          <Text style={{   fontFamily: 'Inter-Black'}}> Thanks for joining us! {text}</Text>
+          <Text style={{  textAlign: 'center', fontFamily: 'Inter-Black', margin: 4}}> Thanks for joining us! {text}</Text>
+</ScrollView>
+
         </View>
         <StatusBar style="light" />
       </SafeAreaView>

@@ -6,13 +6,16 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./components/Home";
 import About from "./components/About"
 import Art from "./components/Art"
-import SplashScreen from './components/SplashScreen';
 import { UserProvider } from "./context/userContext";
 import { UserStackNavigation } from "./navigation/UserNavigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import * as SplashScreen from 'expo-splash-screen';
+
 export default function App() {
   const Tab = createBottomTabNavigator();
 
+  SplashScreen.preventAutoHideAsync();
+  setTimeout(SplashScreen.hideAsync , 2000)
 
 
   return (
@@ -37,7 +40,7 @@ export default function App() {
             
             <Tab.Screen
      
-              name="ARTAYO"
+              name="HOME"
               component={Home}
               options={{
                 tabBarIcon: ({ focused, size, color }) =>
