@@ -132,7 +132,7 @@ function Home({ navigation }) {
             placeholder="type your email here"
           />
           <Button color="#ca5310" title="Submit" onPress={()=>confirmEmail()}></Button>
-          <Text style={{  textAlign: 'center', fontFamily: 'Inter-Black', margin: 4}}> Thanks for joining us! {text}</Text>
+          <Text style={{  textAlign: 'center', fontFamily: 'Inter-Black', margin: 4}}> Welcome to Artayo! {text}</Text>
 </ScrollView>
 
         </View>

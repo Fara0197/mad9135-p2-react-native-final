@@ -24,10 +24,10 @@ The app has the following components:
 - useState and UseEffect hooks
 
 3 React Native Apis:
-- Animated, StyleSheet, Alert 
+-  StyleSheet, Alert 
 
 4 Expo components and Apis:
--  Font, SplashScreen, LinearGradient 
+-  Font, SplashScreen, LinearGradient, Flashlist 
 
 The home page has the following components:
 - banner image 
@@ -40,11 +40,13 @@ The home page has the following components:
 
 the art page has the following components:
 - cards of art piece images along with a title 
-- linear gradient 
+- linear gradient
+- animated component 
+- flashlist component 
 
 the about page has the following components:
 - profile cards of indivudals working for Artaryo
-- animation used here 
+
 
 the artists page has the following components:
 - cards of artists and their work 

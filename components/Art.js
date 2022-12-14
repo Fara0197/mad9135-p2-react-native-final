@@ -6,16 +6,29 @@ import {
   StyleSheet,
   FlatList,
   TouchableHighlight,
+
 } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { artList } from "../data/Data"
 import React, {Component} from "react";
 import { LinearGradient } from 'expo-linear-gradient';
+
+
+
+
 export default class Art extends Component {
+
+
+  
+
+
+
+  
   constructor(props) {
     super(props);
     this.state = {};
   }
+  
 
   renderList = ({ item }) => {
     return (
@@ -25,7 +38,7 @@ export default class Art extends Component {
           <LinearGradient
           colors={['#f5ebe0', '#eab69f','#f4f1de', ]}>
                  <Text style={{marginLeft: 'auto',
-      fontSize: 18, padding: 5, fontStyle: 'italic'}}> title: {item.title}</Text>
+      fontSize: 18, padding: 5, fontStyle: 'italic'}}>  {item.title}</Text>
           </LinearGradient>
    
         <Image style={{
@@ -55,7 +68,7 @@ export default class Art extends Component {
           <View
             style={{ flex: 1, justifyContent: "center", alignItems: "center", }}
           >
-            <Text style ={{fontSize: 20, padding: 20}}>our most viewed pieces</Text>
+            <Text style ={{fontSize: 20, padding: 20}}>Most Popular</Text>
             <FlatList
               data={artList}
               renderItem={this.renderList}
