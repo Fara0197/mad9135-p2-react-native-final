@@ -24,23 +24,23 @@ function Details({ route }) {
           </Text>
 
           <Text style={{ fontSize: 20, fontWeight: "light", padding: 15 }}>
-           artist:  {user.artist_display}
+            artist: {user.artist_display}
           </Text>
           <Text style={{ fontSize: 18, fontWeight: "light", padding: 15 }}>
-           size:  {user.dimensions}
+            size: {user.dimensions}
           </Text>
           <Text style={{ fontSize: 18, fontWeight: "light", padding: 15 }}>
-           department:  {user.department_title}
+            department: {user.department_title}
           </Text>
           <Text style={{ fontSize: 18, fontWeight: "light", padding: 15 }}>
-           display:  {user.medium_display}
+            display: {user.medium_display}
           </Text>
 
           <Text style={{ fontSize: 10, fontWeight: "light", padding: 20 }}>
-           credits:  {user.credit_line}
+            credits: {user.credit_line}
           </Text>
           <Text style={{ fontSize: 8, fontWeight: "light", padding: 20 }}>
-           origin:  {user.place_of_origin}
+            origin: {user.place_of_origin}
           </Text>
         </View>
       </SafeAreaView>

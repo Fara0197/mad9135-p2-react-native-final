@@ -7,8 +7,8 @@ export default function UserItem({ user, onPress }) {
     <SafeAreaProvider>
       <SafeAreaView>
         <TouchableOpacity style={styles.card} onPress={onPress}>
-        {/* //after some testing,the image api no longer work */}
-         {/* <Image 
+          {/* //after some testing,the image api no longer work */}
+          {/* <Image 
             style={{ width: 20, height: 20 }}
             source={{ uri: `${user.thumbnail.lqip}` }}
           ></Image> */}
@@ -17,11 +17,11 @@ export default function UserItem({ user, onPress }) {
           </Text>
 
           <Text style={{ fontSize: 12, fontWeight: "bold", padding: 5 }}>
-           type: {user.artwork_type_title}
+            type: {user.artwork_type_title}
           </Text>
 
           <Text style={{ fontSize: 12, padding: 5 }}>
-           department: {user.department_title}
+            department: {user.department_title}
           </Text>
 
           <Text style={{ fontSize: 10, fontWeight: "light", padding: 5 }}>
@@ -29,7 +29,7 @@ export default function UserItem({ user, onPress }) {
           </Text>
 
           <Text style={{ fontSize: 8, fontWeight: "light", padding: 5 }}>
-           date: {user.date_display}
+            date: {user.date_display}
           </Text>
         </TouchableOpacity>
       </SafeAreaView>
