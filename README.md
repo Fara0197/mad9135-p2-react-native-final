@@ -7,7 +7,8 @@
 This application is based on an art gallery company called 'Artayo'. 
 
 A splash screen appears first then users are brought to the 'Home' page,
-which gives a brief description of what the company is about. Users can also input their email to subscribe to Artayo newsletter
+which gives a brief description of what the company is about. 
+Users can also input their email to subscribe to Artayo newsletter
 
 When the user navigates to the 'Art' page, data is fetched and displays a list of popular art pieces. 
 

@@ -41,13 +41,16 @@ export default class Art extends Component {
       fontSize: 18, padding: 5, fontStyle: 'italic'}}>  {item.title}</Text>
           </LinearGradient>
    
-        <Image style={{
+   <TouchableHighlight>
+   <Image style={{
             width: 350,
             height: 300,
             
           }}
               source={item.image}
             />
+   </TouchableHighlight>
+     
    
         </View>
       </TouchableHighlight>

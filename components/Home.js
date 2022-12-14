@@ -16,16 +16,13 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { useFonts } from 'expo-font';
 
-
 function Home({ navigation }) {
 
 
 
 
   const [text, setText] = useState("");
-  // const [fontsLoaded] = useFonts({
-  //   'Inter-Black': require("'./assets/fonts/Inter-Black.ttf'"),
-  // });
+  const [input, setInput] = useState("");
 
   const confirmEmail = () =>{
     Alert.alert("Confirm","do you want to submit this email?",[
@@ -67,6 +64,19 @@ function Home({ navigation }) {
         >
 
 <ScrollView>
+
+{/* <Searchbar placeholder="Search" onChangeText={(text) => {
+					setInput(text);
+				}}
+        style={{
+          textAlign: 'center',
+           fontSize: 20,
+           fontFamily: 'Inter-Black',
+           backgroundColor: "#f5ebe0",
+           
+         }}
+				value={input}/> */}
+			<StatusBar style="auto" />
 <Text
             style={{
              textAlign: 'center',
@@ -132,7 +142,7 @@ function Home({ navigation }) {
             placeholder="type your email here"
           />
           <Button color="#ca5310" title="Submit" onPress={()=>confirmEmail()}></Button>
-          <Text style={{  textAlign: 'center', fontFamily: 'Inter-Black', margin: 4}}> Welcome to Artayo! {text}</Text>
+          <Text style={{  fontSize: 20, textAlign: 'center', fontFamily: 'Inter-Black', margin: 4}}> Welcome to Artayo! {text}</Text>
 </ScrollView>
 
         </View>
