@@ -41,12 +41,11 @@ The home page has the following components:
 the art page has the following components:
 - cards of art piece images along with a title 
 - linear gradient
-- animated component 
-- flashlist component 
+
 
 the about page has the following components:
 - profile cards of indivudals working for Artaryo
-
+- flashlist component 
 
 the artists page has the following components:
 - cards of artists and their work 
